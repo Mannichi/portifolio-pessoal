@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Sen&display=swap');
+
+:root{
+    --cor-primaria: #141414;
+    --cor-secundaria: #D6B751;
+    --cor-terciaria: #B87E33;
+    --cor-quaternaria: #243A3B;
+    --cor-quinaria: #CCCCCC;
+}
+
+header, footer{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    background-color: #141414;
+}
+
+main{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80vh;
+    background-color: #CCCCCC;
+}
+
+
+.menu{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu__acesso{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+}
+
+.menu__acesso__icone{
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    background-image: url('../icons/menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    height: 100%;
+    width: 3rem;
+    background-color: var(--cor-terciaria);
+}
+
+.menu__navegacao{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow:#111 2px 4px 6px 4px;
+    width: 100%;
+    height: 0rem;
+}
+
+.menu__navegacao__fechar{
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    background-image: url('../icons/sair.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10vh;
+    width: 3rem;
+    background-color: var(--cor-terciaria);
+    border-radius: 4px;
+}
+
+.menu__navegacao__fechar:hover{
+    background-image: url('../icons/sair_hover.png');
+}
+
+.menu__navegacao__lista{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+.menu__navegacao__lista li{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: auto 20px;
+    width: auto;
+    height: auto;
+    margin: auto 60px;
+    font-size: 26px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    color: #000;
+
+}
+
+.menu__navegacao__lista li a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.menu__navegacao__lista li a:hover{
+    text-shadow: #111 2px 2px 6px;
+}
+
+#btnClose{
+    height: auto;
+    position: absolute;
+    right:0;
+}
+
+.effect{
+    transition: height 1.5s;
+}
