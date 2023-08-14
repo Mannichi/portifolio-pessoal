@@ -13,17 +13,145 @@ header, footer{
     box-sizing: border-box;
     width: 100%;
     height: 10vh;
-    background-color: #141414;
+    background-color:var(--cor-primaria);
 }
 
 main{
     display: flex;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 80vh;
-    background-color: #CCCCCC;
+    background-color: var(--cor-quinaria);
 }
 
+.cabecalho{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.cabecalho__titulo {
+    color: var(--cor-quinaria) ;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-left: 40px;
+}
+
+.cabecalho__voltar{
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+#bemvindo{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 80%;
+}
+
+.bemvindo__conteudo {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    gap: 20px;
+    margin: 30px;
+}
+
+.bemvindo__conteudo h1{
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    align-self: self-start;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.bemvindo__conteudo p{
+    font-family: 'Jost', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.bemvindo__conteudo h2{
+    font-family: 'Jost', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.bemvindo__conteudo a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
+    width: 10rem;
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.bemvindo__conteudo a img{
+    margin-right: 6px;
+}
+
+
+.bemvindo__conteudo a:hover {
+    background-color: var(--cor-quaternaria);
+    color: var(--cor-quinaria);
+    border-color: var(--cor-primaria);
+    transition: background 0.3s, color 0.3s;
+    
+    .icone__linkedin {
+        background: url('../icons/linkedin_hover.png');
+    }
+    
+    .icone__github {
+        background: url('../icons/github_hover.png');
+    }
+}
+
+.bemvindo__conteudo__foto{
+    width: 50%;
+    height: 100%;
+}
+
+.rodape {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+
+.rodape p{
+    color: var(--cor-quinaria) ;
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+}
+
+.rodape img {
+    height: 80%;
+}
 
 .menu{
     display: flex;
@@ -64,16 +192,20 @@ main{
     box-shadow:#111 2px 4px 6px 4px;
     width: 100%;
     height: 0rem;
+    background-color: var(--cor-primaria);
+    border: #CCCCCC 1px solid;
 }
 
 .menu__navegacao__fechar{
     cursor: pointer;
     display: flex;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     background-image: url('../icons/sair.png');
     background-repeat: no-repeat;
     background-position: center;
-    height: 10vh;
+    height: 100%;
     width: 3rem;
     background-color: var(--cor-terciaria);
     border-radius: 4px;
@@ -87,8 +219,9 @@ main{
     display: flex;
     box-sizing: border-box;
     align-items: center;
+    justify-content: center;
     width: auto;
-    height: 100%;
+    height: auto;
 }
 
 .menu__navegacao__lista li{
@@ -98,11 +231,11 @@ main{
     padding: auto 20px;
     width: auto;
     height: auto;
-    margin: auto 60px;
+    margin: auto 40px;
     font-size: 26px;
     font-family: 'Sen', sans-serif;
     font-weight: 600;
-    color: #000;
+    color: var(--cor-primaria);
 
 }
 
@@ -116,9 +249,13 @@ main{
 }
 
 #btnClose{
+    display: flex;
+    box-sizing: border-box;
+    width: auto;
     height: auto;
     position: absolute;
-    right:0;
+    right: 0;
+    bottom: 0;
 }
 
 .effect{
