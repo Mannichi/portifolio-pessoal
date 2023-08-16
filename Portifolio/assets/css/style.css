@@ -15,6 +15,13 @@ header, footer{
     height: 10vh;
     background-color:var(--cor-primaria);
 }
+header{
+    justify-content: left;
+}
+
+footer{
+    justify-content: center;
+}
 
 main{
     display: flex;
@@ -54,20 +61,21 @@ main{
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 80%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
 }
 
 .bemvindo__conteudo {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 50%;
-    height: 80%;
-    gap: 20px;
-    margin: 30px;
+    height: 100%;
+    gap: 10px;
 }
 
 .bemvindo__conteudo h1{
@@ -112,7 +120,6 @@ main{
     margin-right: 6px;
 }
 
-
 .bemvindo__conteudo a:hover {
     background-color: var(--cor-quaternaria);
     color: var(--cor-quinaria);
@@ -131,6 +138,8 @@ main{
 .bemvindo__conteudo__foto{
     width: 50%;
     height: 100%;
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
 }
 
 .rodape {
@@ -186,34 +195,31 @@ main{
 
 .menu__navegacao{
     display: flex;
-    box-sizing: border-box;
+    box-sizing: content-box;
     justify-content: center;
-    flex-direction: row;
     box-shadow:#111 2px 4px 6px 4px;
     width: 100%;
     height: 0rem;
     background-color: var(--cor-primaria);
-    border: #CCCCCC 1px solid;
 }
 
 .menu__navegacao__fechar{
     cursor: pointer;
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
     background-image: url('../icons/sair.png');
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    height: 0;
     width: 3rem;
     background-color: var(--cor-terciaria);
     border-radius: 4px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .menu__navegacao__fechar:hover{
     background-image: url('../icons/sair_hover.png');
-}
+ }
 
 .menu__navegacao__lista{
     display: flex;
@@ -228,15 +234,14 @@ main{
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    padding: auto 20px;
+    padding: auto 2em;
     width: auto;
     height: auto;
-    margin: auto 40px;
+    margin: auto 2rem;
     font-size: 26px;
     font-family: 'Sen', sans-serif;
     font-weight: 600;
     color: var(--cor-primaria);
-
 }
 
 .menu__navegacao__lista li a{
@@ -249,15 +254,400 @@ main{
 }
 
 #btnClose{
-    display: flex;
-    box-sizing: border-box;
     width: auto;
     height: auto;
-    position: absolute;
-    right: 0;
-    bottom: 0;
 }
 
 .effect{
     transition: height 1.5s;
+}
+
+/*Pagina habilidades*/
+#habilidade{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+    display: flex;
+    box-sizing: border-box;
+    width: 33%;
+    height: 100%;
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*página sobre mim*/
+#sobre{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    padding: 20px;
+    gap: 20px;
+}
+
+.sobre__foto{
+    display: flex;
+    box-sizing: border-box;
+    width: 50%;
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+    height: 100%;
+}
+
+.sobre__conteudo{
+    display: flex;
+    box-sizing: border-box;
+    text-align: justify;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+/*Página de Contato*/
+#contato{
+    display: flex;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.contato__conteudo{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    gap: 20px;
+}
+
+.contato__conteudo h1{
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.contato__conteudo img{
+    width: 100%;
+    height: 100%;
+    border: var(--cor-quaternaria) solid 2px;
+    border-radius: 6px;
+}
+
+.contato__formulario{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.contato__formulario form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1rem;
+    gap: 6px;
+}
+
+.contato__formulario input{
+    margin-bottom: 10px;
+}
+
+.contato__formulario input, textarea{
+    border-radius: 4px;
+    border: var(--cor-quaternaria) 2px solid;
+    padding: 6px;
+    font-family: 'Sen', sans-serif;
+    font-size: 1rem;
+}
+
+.contato__formulario button{
+    width: 6rem;
+    padding: 10px;
+    border: var(--cor-quaternaria) solid 2px;
+    border-radius: 6px;
+    align-self: center;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quinaria);
+    font-size: 1rem;
+    box-shadow: var(--cor-primaria) 0px 0px 4px;
+    background-color: var(--cor-quaternaria);
+    margin-bottom: 10px;
+}
+
+.contato__formulario button:active{
+    background-color: #203435;
+    color: var(--cor-quinaria);
+    box-shadow: none;
+    transition: box-shadow .2s;
+}
+
+
+/*-------------Resposividade-----------------*/
+@media (max-width: 359px){
+
+    .menu__navegacao__lista{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .menu__navegacao__lista li{
+        display: flex;
+        font-size: 1rem;
+        height: 3rem;
+    }
+
+    .cabecalho__titulo {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    #bemvindo{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .bemvindo__conteudo {
+        width: auto;
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .bemvindo__conteudo h1{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .bemvindo__conteudo p{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .bemvindo__conteudo h2{
+        font-family: 'Jost', sans-serif;
+        color: var(--cor-quaternaria);
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .bemvindo__conteudo a{
+        border: var(--cor-quaternaria) 1px solid;
+        border-radius: 4px;
+        background-size: 28px;
+        width: 6rem;
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .bemvindo__conteudo__foto{
+        width: auto;
+        height: 50%;
+    }
+
+    .rodape {
+        width: 60%;
+        gap: 10px;
+    }
+    
+    .rodape p{
+        color: var(--cor-quinaria) ;
+        font-family: 'Sen', sans-serif;
+        font-weight: 400;
+        font-size: 8px;
+    }
+    
+    .rodape img {
+        height: 60%;
+    }
+
+    .menu__acesso{
+        height: 2rem;
+    }
+
+    .menu__acesso__icone{
+        width: 2rem;
+        background-size: 28px;
+    }
+
+    .menu__navegacao__fechar{
+        width: 2rem;
+        background-size: 28px;
+    }
+
+    #habilidade{
+        flex-direction: column;
+    }
+
+    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        width: 100%;
+        height: 33%;
+    }
+
+    #sobre{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 10px;
+        height: 100%;
+        width: auto;
+    }
+
+    .sobre__conteudo, .sobre__foto{
+        width: 100%;
+        height: 50%;
+        font-size: .8rem;
+    }
+
+    #contato{
+        flex-direction: column;
+    }
+
+    .contato__conteudo h1{
+        font-size: 1.5rem;
+    }
+
+    .contato__conteudo, .contato__formulario{
+        width: 100%;
+    }
+
+    .contato__formulario input{
+        margin-bottom: 0px;
+    }
+
+    .contato__formulario input, textarea{
+        font-size: .8rem;
+    }
+
+    .contato__formulario button{
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 720px ) and (min-width: 360px){
+    .menu__navegacao__lista{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .menu__navegacao__lista li{
+        display: flex;
+        font-size: 1.5rem;
+        height: 3rem;
+    }
+
+    .cabecalho__titulo {
+        font-size: 2rem;
+    }
+
+    #bemvindo{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .bemvindo__conteudo {
+        flex-direction: column;
+        width: auto;
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .bemvindo__conteudo h1{
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+    
+    .bemvindo__conteudo p{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    
+    .bemvindo__conteudo h2{
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .bemvindo__conteudo a{
+        border: var(--cor-quaternaria) 1px solid;
+        border-radius: 6px;
+        width: 8rem;
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+
+    .bemvindo__conteudo__foto{
+        width: auto;
+        height: 50%;
+    }
+
+    .rodape {
+        width: 80%;
+        gap: 14px;
+    }
+    
+    .rodape p{
+        color: var(--cor-quinaria) ;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .rodape img {
+        height: 70%;
+    }
+
+    #habilidade{
+        flex-direction:column;
+    }
+
+    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        width: 100%;
+        height: 33%;
+    }
+
+    #sobre{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 10px;
+        height: 100%;
+        width: auto;
+    }
+
+    .sobre__conteudo, .sobre__foto{
+        width: 100%;
+        height: 50%;
+        font-size: 1rem;
+    }
 }

@@ -4,21 +4,21 @@ let imgMenuDesativado = '../assets/icons/menu.png';
 
 document.querySelector('.menu__acesso__icone').addEventListener('click', () => {
     const larguraMenu = document.querySelector('#menu__navegacao').clientWidth;
-    console.log(larguraMenu)
-    if(larguraMenu > 720){
+    //console.log(larguraMenu)
+    if(larguraMenu > 360 && larguraMenu > 720){
         document.querySelector('#menu__navegacao').style.height = '10vh';
+        document.querySelector('.menu__navegacao__fechar').style.height = '10vh';
     }else{
-        document.querySelector('#menu__navegacao').style.height = '50vh';
-        //document.querySelector('#menu__navegacao').style.flexDirection = 'column';
+        document.querySelector('#menu__navegacao').style.height = '30vh';
+        document.querySelector('.menu__navegacao__fechar').style.height = '30vh';
     }
-    document.querySelector('#btnClose').style.height = '100%';
     document.querySelector('.menu__acesso__icone').style.backgroundImage = 'url('+imgMenuAtivo+')';
 })
 
 document.querySelector('#btnClose').addEventListener('click', () => {
     document.querySelector('#menu__navegacao').style.height = '0vh';
-    document.querySelector('#btnClose').style.height = '100%';
     document.querySelector('.menu__acesso__icone').style.backgroundImage = 'url('+imgMenuDesativado+')';
+    document.querySelector('.menu__navegacao__fechar').style.height = '0vh';
 })
 
 document.querySelector('#linkHome').addEventListener('click', async () => {
