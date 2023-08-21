@@ -301,6 +301,7 @@ header hr{
     color: var(--cor-quaternaria);
     border: var(--cor-quaternaria) 2px solid;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .habilidade__conteudo01 img, .habilidade__conteudo02 img, .habilidade__conteudo03 img {
@@ -553,7 +554,7 @@ header hr{
         padding: 10px;
     }
 
-    .habilidade__conteudo01 section,  .habilidade__conteudo02 section, .habilidade__conteudo03 section{
+    .habilidade__conteudo01 section, .habilidade__conteudo02 section, .habilidade__conteudo03 section{
         width: 50%;
         height: auto;
         font-size: .7rem;
