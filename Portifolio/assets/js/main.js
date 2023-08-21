@@ -25,28 +25,28 @@ document.querySelector('#linkHome').addEventListener('click', async () => {
     const arquivoRequisicao = await fetch('home.html');
     const sobreText = await arquivoRequisicao.text();
     document.querySelector('main').innerHTML = sobreText;
-    document.querySelector('.cabecalho__titulo').innerHTML = 'Home • • • • •';
+    document.querySelector('.cabecalho__titulo').innerHTML = 'Home •<strong> • </strong>• • •';
 })
 
 document.querySelector('#linkSobre').addEventListener('click', async () => {
     const arquivoRequisicao = await fetch('sobre.html');
     const sobreText = await arquivoRequisicao.text();
     document.querySelector('main').innerHTML = sobreText;
-    document.querySelector('.cabecalho__titulo').innerHTML = 'Sobre mim • • • • •';
+    document.querySelector('.cabecalho__titulo').innerHTML = 'Sobre mim •<strong> • </strong>• • •';
 })
 
 document.querySelector('#linkHabilidades').addEventListener('click', async () => {
     const arquivoRequisicao = await fetch('habilidade.html');
     const sobreText = await arquivoRequisicao.text();
     document.querySelector('main').innerHTML = sobreText;
-    document.querySelector('.cabecalho__titulo').innerHTML = 'Habilidades • • • • •';
+    document.querySelector('.cabecalho__titulo').innerHTML = 'Habilidades •<strong> • </strong>• • •';
 })
 
 document.querySelector('#linkContato').addEventListener('click', async () => {
     const arquivoRequisicao = await fetch('contato.html');
     const sobreText = await arquivoRequisicao.text();
     document.querySelector('main').innerHTML = sobreText;
-    document.querySelector('.cabecalho__titulo').innerHTML = 'Contato • • • • •';
+    document.querySelector('.cabecalho__titulo').innerHTML = 'Contato •<strong> • </strong>• • •';
 })
 
 

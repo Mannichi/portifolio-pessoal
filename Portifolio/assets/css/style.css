@@ -17,6 +17,7 @@ header, footer{
 }
 header{
     justify-content: left;
+    flex-direction: column;
 }
 
 footer{
@@ -28,9 +29,11 @@ main{
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: 80vh;
     background-color: var(--cor-quinaria);
+    padding: 20px;
 }
 
 .cabecalho{
@@ -39,12 +42,23 @@ main{
     align-items: center;
 }
 
+header hr{
+    width:96%;
+    height: 2px;
+    background-color:var(--cor-terciaria);
+    border: none;
+}
+
 .cabecalho__titulo {
     color: var(--cor-quinaria) ;
     font-family: 'Sen', sans-serif;
     font-weight: 600;
     font-size: 3rem;
-    margin-left: 40px;
+    margin: 8px 0px 0px 20px;
+}
+
+.cabecalho strong{
+    color: var(--cor-quaternaria);
 }
 
 .cabecalho__voltar{
@@ -63,7 +77,6 @@ main{
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 20px;
     gap: 20px;
 }
 
@@ -268,7 +281,6 @@ main{
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     width: 100%;
     height: 100%;
     gap: 20px;
@@ -277,11 +289,22 @@ main{
 .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
     display: flex;
     box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 33%;
     height: 100%;
+    font-size: 1.2rem;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    color: var(--cor-quaternaria);
     border: var(--cor-quaternaria) 2px solid;
     border-radius: 10px;
-    padding: 10px;
+}
+
+.habilidade__conteudo01 img, .habilidade__conteudo02 img, .habilidade__conteudo03 img {
+    width: 100%;
 }
 
 /*página sobre mim*/
@@ -295,7 +318,6 @@ main{
     height: 100%;
     font-family: 'Sen', sans-serif;
     color: var(--cor-quaternaria);
-    padding: 20px;
     gap: 20px;
 }
 
@@ -312,7 +334,8 @@ main{
 .sobre__conteudo{
     display: flex;
     box-sizing: border-box;
-    text-align: justify;
+    text-align: left;
+    flex-direction: column;
     width: 50%;
     font-size: 1.2rem;
 }
@@ -326,7 +349,6 @@ main{
     flex-direction: row;
     width: 100%;
     height: 100%;
-    padding: 20px;
     gap: 20px;
 }
 
@@ -336,7 +358,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    border: var(--cor-quaternaria) solid 2px;
+    border-radius: 6px;
     width: 50%;
     height: 100%;
     gap: 20px;
@@ -351,9 +374,7 @@ main{
 
 .contato__conteudo img{
     width: 100%;
-    height: 100%;
-    border: var(--cor-quaternaria) solid 2px;
-    border-radius: 6px;
+    height: auto;
 }
 
 .contato__formulario{
@@ -387,6 +408,10 @@ main{
     font-size: 1rem;
 }
 
+.contato__formulario label{
+    align-self: flex-start;
+}
+
 .contato__formulario button{
     width: 6rem;
     padding: 10px;
@@ -412,6 +437,10 @@ main{
 /*-------------Resposividade-----------------*/
 @media (max-width: 359px){
 
+    main{
+        padding: 10px;
+    }
+    
     .menu__navegacao__lista{
         display: flex;
         box-sizing: border-box;
@@ -433,12 +462,13 @@ main{
     #bemvindo{
         height: 100%;
         flex-direction: column;
+        padding: 10px;
     }
 
     .bemvindo__conteudo {
         width: auto;
-        margin: 10px;
         gap: 10px;
+        text-align: justify;
     }
 
     .bemvindo__conteudo h1{
@@ -504,12 +534,36 @@ main{
     }
 
     #habilidade{
+        display: flex;
+        box-sizing: border-box;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
     }
 
     .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        flex-direction: row;
         width: 100%;
         height: 33%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .habilidade__conteudo01 section,  .habilidade__conteudo02 section, .habilidade__conteudo03 section{
+        width: 50%;
+        height: auto;
+        font-size: .7rem;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .habilidade__conteudo01 img, .habilidade__conteudo02 img , .habilidade__conteudo03 img{
+        height: 100%;
+        width: auto;
     }
 
     #sobre{
@@ -550,7 +604,6 @@ main{
     .contato__formulario button{
         font-size: .8rem;
     }
-
 }
 
 @media (max-width: 720px ) and (min-width: 360px){
@@ -574,12 +627,12 @@ main{
     #bemvindo{
         height: 100%;
         flex-direction: column;
+        padding: 15px;
     }
 
     .bemvindo__conteudo {
         flex-direction: column;
         width: auto;
-        margin: 10px;
         gap: 10px;
     }
 
@@ -627,15 +680,6 @@ main{
         height: 70%;
     }
 
-    #habilidade{
-        flex-direction:column;
-    }
-
-    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
-        width: 100%;
-        height: 33%;
-    }
-
     #sobre{
         display: flex;
         box-sizing: border-box;
@@ -650,4 +694,35 @@ main{
         height: 50%;
         font-size: 1rem;
     }
+    #habilidade{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        flex-direction: row;
+        width: 100%;
+        height: 33%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .habilidade__conteudo01 section, .habilidade__conteudo02 section, .habilidade__conteudo03 section{
+        width: 50%;
+        height: auto;
+    }
+
+    .habilidade__conteudo01 img, .habilidade__conteudo02 img , .habilidade__conteudo03 img{
+        height: 100%;
+        width: auto;
+    }
+
 }
