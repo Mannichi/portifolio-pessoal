@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Sen&display=swap');
+
+:root{
+    --cor-primaria: #141414;
+    --cor-secundaria: #D6B751;
+    --cor-terciaria: #B87E33;
+    --cor-quaternaria: #243A3B;
+    --cor-quinaria: #CCCCCC;
+}
+
+header, footer{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    background-color:var(--cor-primaria);
+}
+header{
+    justify-content: left;
+    flex-direction: column;
+}
+
+footer{
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--cor-quinaria);
+    padding: 20px;
+}
+
+.cabecalho{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+header hr{
+    width:96%;
+    height: 2px;
+    background-color:var(--cor-terciaria);
+    border: none;
+}
+
+.cabecalho__titulo {
+    color: var(--cor-quinaria) ;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 8px 0px 0px 20px;
+}
+
+.cabecalho strong{
+    color: var(--cor-quaternaria);
+}
+
+.cabecalho__voltar{
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+#bemvindo{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.bemvindo__conteudo {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 20px;
+}
+
+.bemvindo__conteudo h1{
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.bemvindo__conteudo p{
+    font-family: 'Jost', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.bemvindo__conteudo h2{
+    font-family: 'Jost', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.bemvindo__conteudo a{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
+    width: 10rem;
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.bemvindo__conteudo a img{
+    margin-right: 6px;
+}
+
+.bemvindo__conteudo a:hover {
+    background-color: var(--cor-quaternaria);
+    color: var(--cor-quinaria);
+    border-color: var(--cor-primaria);
+    transition: background 0.3s, color 0.3s;
+    
+    .icone__linkedin {
+        background: url('../icons/linkedin_hover.png');
+    }
+    
+    .icone__github {
+        background: url('../icons/github_hover.png');
+    }
+}
+
+.bemvindo__conteudo__foto{
+    width: auto;
+    height: 100%;
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.rodape {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+
+.rodape p{
+    color: var(--cor-quinaria) ;
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+}
+
+.rodape img {
+    height: 80%;
+}
+
+.menu{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu__acesso{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+}
+
+.menu__acesso__icone{
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+    background-image: url('../icons/menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    height: 100%;
+    width: 3rem;
+    background-color: var(--cor-terciaria);
+}
+
+.menu__navegacao{
+    display: flex;
+    box-sizing: content-box;
+    justify-content: center;
+    box-shadow:#111 2px 4px 6px 4px;
+    width: 100%;
+    height: 0rem;
+    background-color: var(--cor-primaria);
+}
+
+.menu__navegacao__fechar{
+    cursor: pointer;
+    background-image: url('../icons/sair.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 0;
+    width: 3rem;
+    background-color: var(--cor-terciaria);
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.menu__navegacao__fechar:hover{
+    background-image: url('../icons/sair_hover.png');
+ }
+
+.menu__navegacao__lista{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.menu__navegacao__lista li{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: auto 2em;
+    width: auto;
+    height: auto;
+    margin: auto 2rem;
+    font-size: 26px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.menu__navegacao__lista li a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.menu__navegacao__lista li a:hover{
+    text-shadow: #111 2px 2px 6px;
+}
+
+#btnClose{
+    width: auto;
+    height: auto;
+}
+
+.effect{
+    transition: height 1.5s;
+}
+
+/*Pagina habilidades*/
+#habilidade{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 33%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: 'Sen', sans-serif;
+    font-weight: 600;
+    color: var(--cor-quaternaria);
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.habilidade__conteudo01 img, .habilidade__conteudo02 img, .habilidade__conteudo03 img {
+    width: 100%;
+}
+
+/*página sobre mim*/
+#sobre{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    gap: 20px;
+}
+
+.sobre__foto{
+    display: flex;
+    box-sizing: border-box;
+    width: 50%;
+    border: var(--cor-quaternaria) 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+    height: auto;
+}
+
+.sobre__conteudo{
+    display: flex;
+    box-sizing: border-box;
+    text-align: left;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+/*Página de Contato*/
+#contato{
+    display: flex;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.contato__conteudo{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--cor-quaternaria) solid 2px;
+    border-radius: 6px;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+
+.contato__conteudo h1{
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.contato__conteudo img{
+    width: 80%;
+}
+
+.contato__formulario{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.contato__formulario form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quaternaria);
+    font-size: 1rem;
+    gap: 6px;
+}
+
+.contato__formulario input{
+    margin-bottom: 10px;
+}
+
+.contato__formulario input, textarea{
+    border-radius: 4px;
+    border: var(--cor-quaternaria) 2px solid;
+    padding: 6px;
+    font-family: 'Sen', sans-serif;
+    font-size: 1rem;
+}
+
+.contato__formulario label{
+    align-self: flex-start;
+}
+
+.contato__formulario button{
+    width: 6rem;
+    padding: 10px;
+    border: var(--cor-quaternaria) solid 2px;
+    border-radius: 6px;
+    align-self: center;
+    font-family: 'Sen', sans-serif;
+    color: var(--cor-quinaria);
+    font-size: 1rem;
+    box-shadow: var(--cor-primaria) 0px 0px 4px;
+    background-color: var(--cor-quaternaria);
+    margin-bottom: 10px;
+}
+
+.contato__formulario button:active{
+    background-color: #203435;
+    color: var(--cor-quinaria);
+    box-shadow: none;
+    transition: box-shadow .2s;
+}
+
+
+/*-------------Resposividade-----------------*/
+@media (max-width: 359px){
+
+    main{
+        padding: 10px;
+    }
+    
+    .menu__navegacao__lista{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .menu__navegacao__lista li{
+        display: flex;
+        font-size: 1rem;
+        height: 3rem;
+    }
+
+    .cabecalho__titulo {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    #bemvindo{
+        height: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .bemvindo__conteudo {
+        width: auto;
+        gap: 10px;
+        text-align: justify;
+    }
+
+    .bemvindo__conteudo h1{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .bemvindo__conteudo p{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .bemvindo__conteudo h2{
+        font-family: 'Jost', sans-serif;
+        color: var(--cor-quaternaria);
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .bemvindo__conteudo a{
+        border: var(--cor-quaternaria) 1px solid;
+        border-radius: 4px;
+        background-size: 28px;
+        width: 6rem;
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .bemvindo__conteudo__foto{
+        width: auto;
+        height: 40%;
+    }
+
+    .rodape {
+        width: 60%;
+        gap: 10px;
+    }
+    
+    .rodape p{
+        color: var(--cor-quinaria) ;
+        font-family: 'Sen', sans-serif;
+        font-weight: 400;
+        font-size: 8px;
+    }
+    
+    .rodape img {
+        height: 60%;
+    }
+
+    .menu__acesso{
+        height: 2rem;
+    }
+
+    .menu__acesso__icone{
+        width: 2rem;
+        background-size: 28px;
+    }
+
+    .menu__navegacao__fechar{
+        width: 2rem;
+        background-size: 28px;
+    }
+
+    #habilidade{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        flex-direction: row;
+        width: 100%;
+        height: 33%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .habilidade__conteudo01 section, .habilidade__conteudo02 section, .habilidade__conteudo03 section{
+        width: 50%;
+        height: auto;
+        font-size: .7rem;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .habilidade__conteudo01 img, .habilidade__conteudo02 img , .habilidade__conteudo03 img{
+        height: 100%;
+        width: auto;
+    }
+
+    #sobre{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 10px;
+        height: 100%;
+        width: auto;
+    }
+
+    .sobre__conteudo{
+        width: 100%;
+        height: 50%;
+        font-size: .8rem;
+    }
+
+    .sobre__foto{
+        width: 100%;
+    }
+
+    #contato{
+        flex-direction: column;
+    }
+
+    .contato__conteudo h1{
+        font-size: 1.5rem;
+    }
+
+    .contato__conteudo, .contato__formulario{
+        width: 100%;
+    }
+
+    .contato__formulario input{
+        margin-bottom: 0px;
+    }
+
+    .contato__formulario input, textarea{
+        font-size: .8rem;
+    }
+
+    .contato__formulario button{
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 720px ) and (min-width: 360px){
+    .menu__navegacao__lista{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .menu__navegacao__lista li{
+        display: flex;
+        font-size: 1.5rem;
+        height: 3rem;
+    }
+
+    .cabecalho__titulo {
+        font-size: 2rem;
+    }
+
+    #bemvindo{
+        height: 100%;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .bemvindo__conteudo {
+        flex-direction: column;
+        width: auto;
+        gap: 10px;
+    }
+
+    .bemvindo__conteudo h1{
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+    
+    .bemvindo__conteudo p{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    
+    .bemvindo__conteudo h2{
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .bemvindo__conteudo a{
+        border: var(--cor-quaternaria) 1px solid;
+        border-radius: 6px;
+        width: 8rem;
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+
+    .bemvindo__conteudo__foto{
+        width: auto;
+        height: 50%;
+    }
+
+    .rodape {
+        width: 80%;
+        gap: 14px;
+    }
+    
+    .rodape p{
+        color: var(--cor-quinaria) ;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .rodape img {
+        height: 70%;
+    }
+
+    #sobre{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 10px;
+        height: 100%;
+        width: auto;
+    }
+
+    .sobre__conteudo, .sobre__foto{
+        width: 100%;
+        height: 50%;
+        font-size: 1rem;
+    }
+    #habilidade{
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+    }
+
+    .habilidade__conteudo01, .habilidade__conteudo02, .habilidade__conteudo03{
+        flex-direction: row;
+        width: 100%;
+        height: 33%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .habilidade__conteudo01 section, .habilidade__conteudo02 section, .habilidade__conteudo03 section{
+        width: 50%;
+        height: auto;
+    }
+
+    .habilidade__conteudo01 img, .habilidade__conteudo02 img , .habilidade__conteudo03 img{
+        height: 100%;
+        width: auto;
+    }
+
+}
